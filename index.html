@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Media Metadata -->
+  <title>Pankaj Lochan Shaw | Web Developer & Full Stack Developer</title>
+  <meta name="description" content="Personal developer portfolio of Pankaj Lochan Shaw. BCA Student at Netaji Subhas University (Class of 2027). Specializing in React, JavaScript, PHP, MySQL, and modern web development.">
+  <meta name="keywords" content="Pankaj Lochan Shaw, Web Developer, Full Stack Developer, BCA Netaji Subhas University, Frontend Developer, React, PHP, MySQL, Portfolio Jamshedpur">
+  <meta name="author" content="Pankaj Lochan Shaw">
+  
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pankaj Lochan Shaw | Developer Portfolio">
+  <meta property="og:description" content="Explore my web development projects, skills in React, PHP, SQL, and BCA academic journey at Netaji Subhas University.">
+  <meta property="og:image" content="images/pankaj.jpeg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pankaj Lochan Shaw | Developer Portfolio">
+  <meta name="twitter:description" content="BCA Student & Web Developer. Explore my projects, skills, and experience.">
+  <meta name="twitter:image" content="images/pankaj.jpeg">
+  
+  <meta name="theme-color" content="#ff3838">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.7.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Skin Accent Stylesheet -->
+  <link rel="stylesheet" href="css/skins/color-1.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- Mobile Hamburger Toggler Button -->
+  <button class="nav-toggler" id="navToggler" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="main-container">
+    
+    <!-- ========================================================
+         LEFT SIDEBAR NAVIGATION
+         ======================================================== -->
+    <aside class="aside" id="sidebar">
+      <div class="aside-top">
+        <div class="logo">
+          <a href="#home" aria-label="Pankaj home">
+            <span>P</span>ankaj
+          </a>
+        </div>
+        <nav aria-label="Main navigation">
+          <ul class="nav">
+            <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+            <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+            <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#portfolio" class="nav-link"><i class="fa-solid fa-folder-open"></i> Projects</a></li>
+            <li><a href="#services" class="nav-link"><i class="fa-solid fa-list-check"></i> What I Do</a></li>
+            <li><a href="#github" class="nav-link"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-socials">
+          <a href="https://github.com/pankaj-shaw05" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pankaj-lochan-shaw-065179372" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:shaw21826@gmail.com" class="social-icon-btn" aria-label="Send Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <p class="sidebar-copy">© <span id="sidebarYear">2026</span> Pankaj L. Shaw</p>
+      </div>
+    </aside>
+
+    <!-- ========================================================
+         MAIN CONTENT AREA
+         ======================================================== -->
+    <main class="main-content">
+
+      <!-- FLOATING THEME TOOLS DOCK -->
+      <div class="theme-tools-dock" aria-label="Theme settings">
+        <button class="tool-button" id="themeModeToggle" title="Toggle Light/Dark Mode" aria-label="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon" id="themeModeIcon"></i>
+        </button>
+        <div style="position: relative;">
+          <button class="tool-button" id="themePanelToggle" title="Change Accent Color" aria-label="Show theme colors">
+            <i class="fa-solid fa-palette"></i>
+          </button>
+          <div class="theme-panel" id="themePanel">
+            <p class="theme-panel-title">Accent Colors</p>
+            <div class="swatches">
+              <button class="swatch active" data-color="#ff3838" style="--swatch:#ff3838" title="Crimson Red" aria-label="Red theme"></button>
+              <button class="swatch" data-color="#ec1839" style="--swatch:#ec1839" title="Rose Pink" aria-label="Pink theme"></button>
+              <button class="swatch" data-color="#1e9e88" style="--swatch:#1e9e88" title="Emerald Teal" aria-label="Teal theme"></button>
+              <button class="swatch" data-color="#1854b4" style="--swatch:#1854b4" title="Royal Blue" aria-label="Blue theme"></button>
+              <button class="swatch" data-color="#8b5cf6" style="--swatch:#8b5cf6" title="Electric Purple" aria-label="Purple theme"></button>
+              <button class="swatch" data-color="#f59e0b" style="--swatch:#f59e0b" title="Amber Gold" aria-label="Gold theme"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           SECTION 1: HOME (HERO)
+           ======================================================== -->
+      <section class="home section" id="home">
+        <div class="home-content">
+          <div class="home-info">
+            <div class="status-pill">
+              <span class="pulse-dot"></span>
+              <span>Available for Internship & Opportunities</span>
+            </div>
+            <h3 class="hello">Hello, my name is <span class="name">Pankaj Lochan Shaw</span></h3>
+            <h2 class="my-profession">I'm a <span class="profession-highlight">Web Developer & Full Stack Developer</span></h2>
+            <p class="home-bio">
+              BCA student at <strong>Netaji Subhas University</strong> (Class of 2027) and aspiring full-stack developer passionate about building clean, accessible, and user-centric web applications. Focused on frontend architectures, backend APIs with PHP/Python, and structured database engineering with MySQL.
+            </p>
+            <div class="btn-group">
+              <a href="#portfolio" class="btn btn-primary">
+                <i class="fa-solid fa-folder-open"></i> Explore Projects
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-paper-plane"></i> Contact Me
+              </a>
+              <button class="btn btn-outline" id="viewResumeBtn" type="button">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+              </button>
+            </div>
+
+            <!-- Tech Icons for Actual Skills -->
+            <div class="hero-quick-tags">
+              <span class="quick-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="quick-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span class="quick-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="quick-tag"><i class="fa-brands fa-react"></i> React</span>
+              <span class="quick-tag"><i class="fa-brands fa-php"></i> PHP</span>
+              <span class="quick-tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="quick-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+              <span class="quick-tag"><i class="fa-solid fa-code"></i> C++</span>
+              <span class="quick-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+            </div>
+          </div>
+
+          <div class="home-img-wrapper">
+            <div class="home-img-card">
+              <span class="corner corner-top"></span>
+              <img src="images/pankaj.jpeg" alt="Portrait of Pankaj Lochan Shaw" width="290" height="360">
+              <span class="corner corner-bottom"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 2: ABOUT ME
+           ======================================================== -->
+      <section class="section content-section" id="about">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">My academic background, learning journey, and professional aspirations</p>
+          </div>
+
+          <h3 class="about-heading">I'm Pankaj Lochan Shaw, <span>BCA Student & Web Developer</span></h3>
+          <p class="about-intro">
+            I am currently pursuing my <strong>Bachelor of Computer Applications (BCA)</strong> at <strong>Netaji Subhas University</strong> with an expected graduation in <strong>2027</strong>. My journey in technology began with curiosity about how the web works, which quickly evolved into a focused dedication to software engineering. I enjoy developing end-to-end web applications, translating practical problems into clean database schemas, and writing maintainable code. My goal is to join a progressive development team as an intern or junior developer where I can contribute to real-world codebases.
+          </p>
+
+          <!-- Genuine Verified Statistics (No inflated or artificial metrics) -->
+          <div class="stats-row" id="statsContainer">
+            <!-- Rendered dynamically from data/profile.js -->
+          </div>
+
+          <div class="about-grid">
+            <div class="personal-details">
+              <div class="detail-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <p><strong>Degree:</strong> <span>BCA (2024 - 2027)</span></p>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <p><strong>University:</strong> <span>Netaji Subhas Univ.</span></p>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p><strong>Location:</strong> <span>Jamshedpur, India</span></p>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-code"></i>
+                  <p><strong>Primary Stack:</strong> <span>React, JS, PHP, SQL</span></p>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-laptop-code"></i>
+                  <p><strong>Focus:</strong> <span>Full Stack Web Dev</span></p>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <p><strong>Availability:</strong> <span>Open to Internships</span></p>
+                </div>
+              </div>
+              <div class="btn-group">
+                <a class="btn btn-primary" href="#contact"><i class="fa-solid fa-envelope"></i> Hire Me / Contact</a>
+                <button class="btn btn-outline" id="aboutResumeBtn" type="button"><i class="fa-solid fa-file-arrow-down"></i> View Full Resume</button>
+              </div>
+            </div>
+
+            <!-- Learning Journey Highlights -->
+            <div class="about-highlights-box">
+              <h4><i class="fa-solid fa-compass"></i> Learning Journey & Focus</h4>
+              <ul class="highlights-list">
+                <li>Undergraduate computer science student specializing in web engineering and database management.</li>
+                <li>Hands-on experience architecting full-stack web solutions such as the <em>PG Life</em> accommodation portal with PHP & MySQL.</li>
+                <li>Committed to clean code principles, semantic HTML, responsive CSS without framework bloat, and modern ES6+ JavaScript.</li>
+                <li>Actively expanding into backend development with Python & Django alongside foundational C++ algorithms.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 3: PROFESSIONAL SKILLS (CATEGORIZED)
+           ======================================================== -->
+      <section class="section content-section" id="skills">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Technologies and tools categorized with authentic proficiency indicators</p>
+          </div>
+
+          <div class="skills-container" id="skillsContainer">
+            <!-- Dynamically populated from data/profile.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 4: EXPERIENCE & INTERNSHIPS (VERTICAL TIMELINE)
+           ======================================================== -->
+      <section class="section content-section" id="experience">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Experience & Projects</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Practical application development experience and active internship pursuit</p>
+          </div>
+
+          <div class="timeline" id="experienceContainer">
+            <!-- Dynamically populated from data/profile.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 5: EDUCATION & CERTIFICATIONS
+           ======================================================== -->
+      <section class="section content-section" id="education">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Academic degree at Netaji Subhas University and technical credentials</p>
+          </div>
+
+          <div class="edu-cert-container">
+            <!-- Education Column -->
+            <div class="edu-column">
+              <div class="edu-cert-header">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Academic Education</h3>
+              </div>
+              <div id="educationContainer">
+                <!-- Dynamically populated from data/profile.js -->
+              </div>
+            </div>
+
+            <!-- Certifications Column -->
+            <div class="cert-column">
+              <div class="edu-cert-header">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Certifications & Training</h3>
+              </div>
+              <div id="certificationsContainer" style="display: flex; flex-direction: column; gap: 14px;">
+                <!-- Dynamically populated from data/profile.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 6: PROJECTS / PORTFOLIO (VERY IMPORTANT)
+           ======================================================== -->
+      <section class="section content-section" id="portfolio">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Practical web applications, full-stack portals, and interactive student projects</p>
+          </div>
+
+          <!-- Filter Tabs & Quick Search Toolbar -->
+          <div class="portfolio-toolbar">
+            <div class="portfolio-filters" id="portfolioFilters">
+              <button class="filter-btn active" data-filter="all">All Projects</button>
+              <button class="filter-btn" data-filter="featured"><i class="fa-solid fa-star" style="color: #f59e0b; margin-right: 4px;"></i> Featured</button>
+              <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+              <button class="filter-btn" data-filter="frontend">Frontend</button>
+              <button class="filter-btn" data-filter="javascript">JavaScript</button>
+              <button class="filter-btn" data-filter="concept">Concepts & Systems</button>
+            </div>
+            <div class="portfolio-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="projectSearch" placeholder="Search by name, tech or skill..." aria-label="Search projects">
+            </div>
+          </div>
+
+          <!-- Dynamic Projects Container (Populated from data/projects.js) -->
+          <div class="project-grid" id="projectsContainer">
+            <!-- Projects are automatically rendered via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 7: WHAT I DO (SERVICES SECTION)
+           ======================================================== -->
+      <section class="section content-section" id="services">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">What I Do</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Real, practical capabilities appropriate for my current experience level</p>
+          </div>
+
+          <div class="cards-grid" id="servicesContainer">
+            <!-- Dynamically populated from data/profile.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 8: GITHUB INTEGRATION
+           ======================================================== -->
+      <section class="section content-section" id="github">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">GitHub Repositories</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Live public repositories and code activity from my GitHub profile</p>
+          </div>
+
+          <!-- GitHub Profile Banner Card -->
+          <div class="github-header-card">
+            <div class="github-profile-info">
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <h4>Pankaj Lochan Shaw (@pankaj-shaw05)</h4>
+                <p>Public repositories, open-source projects, and code experiments.</p>
+              </div>
+            </div>
+            <a href="https://github.com/pankaj-shaw05" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fa-brands fa-github"></i> View GitHub Profile
+            </a>
+          </div>
+
+          <!-- Dynamic GitHub Repositories Grid -->
+          <div class="github-repos-grid" id="githubReposContainer">
+            <!-- Repositories populated from GitHub API with graceful fallback -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 9: CONTACT ME
+           ======================================================== -->
+      <section class="section content-section" id="contact">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">Get in touch for internship roles, project collaborations, or developer queries</p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-cards">
+              <div class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-card-details">
+                  <h4>Email Address</h4>
+                  <p><a href="mailto:shaw21826@gmail.com" style="color: inherit;">shaw21826@gmail.com</a></p>
+                  <button type="button" class="copy-email-btn" id="copyEmailTrigger" data-email="shaw21826@gmail.com">
+                    <i class="fa-regular fa-copy"></i> Copy Email Address
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-card-details">
+                  <h4>Phone Number</h4>
+                  <p><a href="tel:+919835401227" style="color: inherit;">(+91) 9835401227</a></p>
+                  <a href="tel:+919835401227" style="color: var(--skin-color); font-size: 11.5px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px;">
+                    <i class="fa-solid fa-phone-volume"></i> Call Directly
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-card-details">
+                  <h4>Location</h4>
+                  <p>Baharagora / Jamshedpur, Jharkhand, India</p>
+                  <span style="font-size: 11px; color: #10b981; font-weight: 500;">Available for Remote & On-site roles</span>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="contact-card-details">
+                  <h4>Professional Profiles</h4>
+                  <p>Connect with me on LinkedIn and explore code repositories on GitHub.</p>
+                  <div style="display: flex; gap: 12px; margin-top: 6px;">
+                    <a href="https://github.com/pankaj-shaw05" target="_blank" rel="noopener noreferrer" style="color: var(--skin-color); font-size: 12px; font-weight: 600;">
+                      <i class="fa-brands fa-github"></i> @pankaj-shaw05
+                    </a>
+                    <a href="https://www.linkedin.com/in/pankaj-lochan-shaw-065179372" target="_blank" rel="noopener noreferrer" style="color: var(--skin-color); font-size: 12px; font-weight: 600;">
+                      <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Message Form -->
+            <div class="contact-form-box">
+              <h3>Send A Message</h3>
+              <p class="contact-note">
+                Have an opportunity or inquiry? Send a direct message and I will respond to your email promptly.
+              </p>
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contactName">Your Name *</label>
+                    <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Your Email *</label>
+                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="e.g. john@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="contactSubject">Subject *</label>
+                  <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="e.g. Internship Inquiry / Web Project" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactMessage">Your Message *</label>
+                  <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="sendMessageBtn">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SITE FOOTER
+           ======================================================== -->
+      <footer class="site-footer">
+        <p class="footer-credits">
+          © <span id="year">2026</span> <strong>Pankaj Lochan Shaw</strong>. Built with semantic <span>HTML5, CSS3 & JavaScript</span>.
+        </p>
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Back to Top ↑</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ========================================================
+       MODAL 1: REUSABLE INDIVIDUAL PROJECT DETAILS VIEW
+       (Displays all 10 required items for any clicked project)
+       ======================================================== -->
+  <div class="modal-overlay" id="projectDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="project-detail-modal-box">
+      <button class="modal-close-btn" id="closeProjectDetailModal" aria-label="Close project details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="projectDetailModalContent">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 2: FULL RESUME VIEWER & PRINT
+       ======================================================== -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="project-detail-modal-box" style="max-width: 820px; padding: 28px;">
+      <button class="modal-close-btn" id="closeResumeModal" aria-label="Close resume modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Resume Modal Action Header -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle);">
+        <div>
+          <h3 style="font-size: 18px; color: var(--text-black-900); margin-bottom: 3px;">
+            <i class="fa-solid fa-file-invoice" style="color: var(--skin-color); margin-right: 6px;"></i>
+            Pankaj Lochan Shaw — Official Resume
+          </h3>
+          <p style="font-size: 12px; color: var(--text-muted); margin: 0;">
+            Web Developer | Netaji Subhas University
+          </p>
+        </div>
+        <div class="btn-group">
+          <a href="resume.html" target="_blank" class="btn btn-outline btn-sm">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+          </a>
+          <a href="resume.html" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Resume Document Sheet inside Modal -->
+      <div style="background: var(--bg-black-50); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 24px; font-size: 13px; color: var(--text-black-700); line-height: 1.6;">
+        
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle);">
+          <h2 style="font-size: 22px; font-weight: 800; color: var(--text-black-900); letter-spacing: 0.5px; margin-bottom: 6px; text-transform: uppercase;">
+            Pankaj Lochan Shaw
+          </h2>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; font-size: 12.5px; color: var(--text-muted);">
+            <a href="mailto:shaw21826@gmail.com" style="color: var(--skin-color);"><i class="fa-solid fa-envelope"></i> shaw21826@gmail.com</a>
+            <span>•</span>
+            <a href="tel:+919835401227" style="color: var(--skin-color);"><i class="fa-solid fa-phone"></i> (+91) 9835401227</a>
+            <span>•</span>
+            <a href="https://github.com/pankaj-shaw05" target="_blank" rel="noopener noreferrer" style="color: var(--skin-color);"><i class="fa-brands fa-github"></i> @pankaj-shaw05</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/pankaj-lochan-shaw-065179372" target="_blank" rel="noopener noreferrer" style="color: var(--skin-color);"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+          </div>
+        </div>
+
+        <!-- 1. SKILLS -->
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 13.5px; font-weight: 700; color: var(--text-black-900); text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 4px; margin-bottom: 8px;">
+            Skills
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 4px; font-size: 12.5px;">
+            <div><strong style="color: var(--text-black-900);">❖ Programming Languages:</strong> C, C++, Python</div>
+            <div><strong style="color: var(--text-black-900);">❖ Web Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, React</div>
+            <div><strong style="color: var(--text-black-900);">❖ Database:</strong> MySQL</div>
+            <div><strong style="color: var(--text-black-900);">❖ Tools & Platforms:</strong> Git, GitHub, VS Code</div>
+          </div>
+        </div>
+
+        <!-- 2. EDUCATION -->
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 13.5px; font-weight: 700; color: var(--text-black-900); text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 4px; margin-bottom: 8px;">
+            Education
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+              <div><strong>❖ BCA</strong> | Netaji Subhas University, Jamshedpur</div>
+              <div style="color: var(--skin-color); font-weight: 600;">Aug 2024 – Present</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+              <div><strong>❖ XII (JAC Board)</strong> | Model School, Baharagora</div>
+              <div style="color: var(--text-muted);">62.3% | 2024</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+              <div><strong>❖ X (JAC Board)</strong> | Saraswati Shishu Vidya Mandir, Baharagora</div>
+              <div style="color: var(--text-muted);">91.60% | 2022</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. EXPERIENCE -->
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 13.5px; font-weight: 700; color: var(--text-black-900); text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 4px; margin-bottom: 8px;">
+            Experience
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 12.5px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; margin-bottom: 4px;">
+                <div><strong>❖ Full Stack Web Development Intern</strong> | Paul Infotech</div>
+                <div style="color: var(--skin-color); font-weight: 600;">September 2026 – November 2026</div>
+              </div>
+              <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.5; margin-top: 2px;">
+                <li>Working on frontend development using HTML, CSS and JavaScript.</li>
+                <li>Learning and implementing backend development using Python and Django.</li>
+                <li>Developing and improving web application features, practical development tasks, and debugging.</li>
+              </ul>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; margin-bottom: 4px;">
+                <div><strong>❖ Web Development Intern</strong> | Oasis Infobyte</div>
+                <div style="color: #10b981; font-weight: 600;">(1 Month – Remote)</div>
+              </div>
+              <p style="margin: 0; color: var(--text-muted); padding-left: 14px;">
+                Worked on frontend web development projects using HTML, CSS, and JavaScript. Built and deployed multiple real-world projects during the internship period.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ACADEMIC PROJECTS -->
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 13.5px; font-weight: 700; color: var(--text-black-900); text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 4px; margin-bottom: 8px;">
+            Academic Projects
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 12.5px;">
+            <div>
+              <strong>❖ PG Life – Student Accommodation Web Application</strong>
+              <div style="color: var(--text-muted); font-size: 12px; margin: 2px 0;">
+                <em>Technologies:</em> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Git/GitHub
+              </div>
+              <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.5;">
+                <li>Developed a responsive web application for students to explore PG accommodation options.</li>
+                <li>Implemented dynamic functionality and database integration using PHP and MySQL.</li>
+                <li>Used React, Bootstrap, and JavaScript for frontend development and Git/GitHub for version control.</li>
+              </ul>
+            </div>
+            <div>
+              <strong>❖ Tic Tac Toe Game</strong>
+              <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.5;">
+                <li>Built an interactive Tic Tac Toe game using HTML, CSS, and JavaScript with complete game logic, win detection, and fully responsive design.</li>
+              </ul>
+            </div>
+            <div>
+              <strong>❖ Portfolio Website</strong>
+              <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.5;">
+                <li>Designed a fully responsive personal portfolio website using HTML, CSS, and JavaScript to showcase skills, projects, and contact information.</li>
+              </ul>
+            </div>
+            <div>
+              <strong>❖ Amazon Clone Website</strong>
+              <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.5;">
+                <li>Created a fully responsive Amazon homepage clone using HTML and CSS featuring hover effects, navigation bar, product cards, and modern UI layout.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. ACHIEVEMENTS / CERTIFICATION -->
+        <div>
+          <h4 style="font-size: 13.5px; font-weight: 700; color: var(--text-black-900); text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 4px; margin-bottom: 8px;">
+            Achievements / Certification
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 5px; font-size: 12.5px;">
+            <div>❖ <strong>Internshala Trainings</strong> – Full Stack Web Development with AI | 8-Week Training | <span style="color: var(--skin-color); font-weight: 600;">83%</span></div>
+            <div>❖ <strong>Oasis Infobyte</strong> – 1-Month Web Development & Designing Internship Certificate</div>
+            <div>❖ <strong>YHills Edutech</strong> – Building AI Agent Bootcamp Certification</div>
+            <div>❖ <strong>CyberPeace Foundation</strong> – Cyber Peace First Responders & Myth Busters Training (Supported by Google.org)</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="btn-group" style="justify-content: flex-end; margin-top: 18px;">
+        <a href="mailto:shaw21826@gmail.com?subject=Opportunity%20Inquiry%20-%20Pankaj%20Lochan%20Shaw" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-envelope"></i> Send Email
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       JAVASCRIPT MODULES
+       ======================================================== -->
+  <!-- 1. Centralized Profile Data (Skills, Stats, Experience, Education, Certifications) -->
+  <script src="data/profile.js"></script>
+
+  <!-- 2. Centralized Projects Database (All 14 fields) -->
+  <script src="data/projects.js"></script>
+  
+  <!-- 3. Application Logic & Interactive Features -->
+  <script src="app.js"></script>
+</body>
+</html>

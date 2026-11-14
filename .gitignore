@@ -1,0 +1,34 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor & IDE directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs & Temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tmp
+*.bak
+
+# Environment variables (if any)
+.env
+.env.local
+.env.*.local
+
+# Build output / Node modules (if extended in future)
+node_modules/
+dist/
+build/
+.cache/

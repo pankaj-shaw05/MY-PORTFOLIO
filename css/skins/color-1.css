@@ -1,0 +1,5 @@
+/* Theme accent color. Default is Crimson Red. */
+:root {
+  --skin-color: #ff3b30;
+  --skin-rgb: 255, 59, 48;
+}

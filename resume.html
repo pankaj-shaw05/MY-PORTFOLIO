@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pankaj Lochan Shaw — Resume</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      font-size: 13.5px;
+      padding: 24px 16px;
+    }
+
+    /* Floating Toolbar */
+    .resume-toolbar {
+      max-width: 850px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: #ff3838;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(255, 56, 56, 0.35);
+    }
+    .btn-primary:hover {
+      background-color: #e02828;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: #ffffff;
+      color: #334155;
+      border-color: #cbd5e1;
+    }
+    .btn-outline:hover {
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    /* Resume Document Sheet */
+    .resume-sheet {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 45px 50px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+    }
+
+    /* Header */
+    .resume-header {
+      text-align: center;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .resume-name {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .resume-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 20px;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .resume-contacts a {
+      color: #0284c7;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .resume-contacts a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    .resume-section {
+      margin-bottom: 20px;
+    }
+
+    .section-heading {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Skills List */
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 13px;
+    }
+
+    .skill-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .skill-row strong {
+      color: #0f172a;
+      min-width: 175px;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .bullet-point {
+      color: #ff3838;
+      font-size: 12px;
+    }
+
+    /* Education & Experience Items */
+    .resume-item {
+      margin-bottom: 12px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 13.5px;
+    }
+
+    .item-subtitle {
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .item-date {
+      color: #64748b;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .item-desc {
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.55;
+      margin-top: 2px;
+    }
+
+    /* Bulleted Lists */
+    .resume-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+      padding-left: 14px;
+    }
+
+    .resume-bullets li {
+      position: relative;
+      color: #334155;
+      font-size: 12.8px;
+      line-height: 1.5;
+    }
+
+    .resume-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: -12px;
+      color: #475569;
+      font-weight: bold;
+    }
+
+    .tech-inline {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* Achievements & Certifications List */
+    .achievements-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .achievements-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 13px;
+      color: #1e293b;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .resume-toolbar {
+        display: none !important;
+      }
+      .resume-sheet {
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      @page {
+        margin: 1.2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Actions Toolbar -->
+  <div class="resume-toolbar">
+    <div class="toolbar-left">
+      <a href="index.html" class="btn btn-outline">
+        <i class="fa-solid fa-arrow-left"></i> Return to Portfolio
+      </a>
+    </div>
+    <div class="toolbar-right">
+      <button onclick="window.print()" class="btn btn-primary">
+        <i class="fa-solid fa-print"></i> Print / Save as PDF
+      </button>
+      <a href="mailto:shaw21826@gmail.com?subject=Opportunity%20Inquiry%20-%20Pankaj%20Lochan%20Shaw" class="btn btn-outline">
+        <i class="fa-solid fa-envelope"></i> Email Pankaj
+      </a>
+    </div>
+  </div>
+
+  <!-- Master Resume Sheet -->
+  <main class="resume-sheet">
+    
+    <!-- Header -->
+    <header class="resume-header">
+      <h1 class="resume-name">Pankaj Lochan Shaw</h1>
+      <div class="resume-contacts">
+        <a href="mailto:shaw21826@gmail.com"><i class="fa-solid fa-envelope"></i> shaw21826@gmail.com</a>
+        <span>|</span>
+        <a href="tel:+919835401227"><i class="fa-solid fa-phone"></i> (+91) 9835401227</a>
+        <span>|</span>
+        <a href="https://github.com/pankaj-shaw05" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> @pankaj-shaw05</a>
+        <span>|</span>
+        <a href="https://www.linkedin.com/in/pankaj-lochan-shaw-065179372" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+      </div>
+    </header>
+
+    <!-- SKILLS -->
+    <section class="resume-section">
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-list">
+        <div class="skill-row">
+          <strong><span class="bullet-point">❖</span> Programming Languages:</strong>
+          <span>C, C++, Python</span>
+        </div>
+        <div class="skill-row">
+          <strong><span class="bullet-point">❖</span> Web Technologies:</strong>
+          <span>HTML, CSS, JavaScript, Bootstrap, React</span>
+        </div>
+        <div class="skill-row">
+          <strong><span class="bullet-point">❖</span> Database:</strong>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-row">
+          <strong><span class="bullet-point">❖</span> Tools & Platforms:</strong>
+          <span>Git, GitHub, VS Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="resume-section">
+      <h2 class="section-heading">Education</h2>
+      
+      <div class="resume-item">
+        <div class="item-header">
+          <div class="item-title">
+            <span class="bullet-point">❖</span> BCA | <span class="item-subtitle">Netaji Subhas University, Jamshedpur</span>
+          </div>
+          <div class="item-date">Aug 2024 – Present</div>
+        </div>
+      </div>
+
+      <div class="resume-item">
+        <div class="item-header">
+          <div class="item-title">
+            <span class="bullet-point">❖</span> XII (JAC Board) | <span class="item-subtitle">Model School, Baharagora</span>
+          </div>
+          <div class="item-date">62.3% | 2024</div>
+        </div>
+      </div>
+
+      <div class="resume-item">
+        <div class="item-header">
+          <div class="item-title">
+            <span class="bullet-point">❖</span> X (JAC Board) | <span class="item-subtitle">Saraswati Shishu Vidya Mandir, Baharagora</span>
+          </div>
+          <div class="item-date">91.60% | 2022</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="resume-section">
+      <h2 class="section-heading">Experience</h2>
+      <div class="resume-item">
+        <div class="item-header">
+          <div class="item-title">
+            <span class="bullet-point">❖</span> Full Stack Web Development Intern | <span class="item-subtitle">Paul Infotech</span>
+          </div>
+          <div class="item-date">September 2026 – November 2026</div>
+        </div>
+        <ul class="resume-bullets">
+          <li>Working on frontend development using HTML, CSS and JavaScript.</li>
+          <li>Learning and implementing backend development using Python and Django.</li>
+          <li>Developing and improving web application features, practical development tasks, and debugging.</li>
+          <li>Gaining hands-on experience with web development workflows and project implementation.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item" style="margin-top: 10px;">
+        <div class="item-header">
+          <div class="item-title">
+            <span class="bullet-point">❖</span> Web Development Intern | <span class="item-subtitle">Oasis Infobyte</span>
+          </div>
+          <div class="item-date">(1 Month – Remote)</div>
+        </div>
+        <p class="item-desc" style="padding-left: 14px;">
+          Worked on frontend web development projects using HTML, CSS, and JavaScript. Built and deployed multiple real-world projects during the internship period.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACADEMIC PROJECTS -->
+    <section class="resume-section">
+      <h2 class="section-heading">Academic Projects</h2>
+      
+      <!-- Project 1: PG Life -->
+      <div class="resume-item">
+        <div class="item-title">
+          <span class="bullet-point">❖</span> PG Life – Student Accommodation Web Application
+        </div>
+        <div style="font-size: 12.5px; color: #475569; padding-left: 14px; margin: 2px 0 4px;">
+          <span class="tech-inline">Technologies:</span> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Git/GitHub
+        </div>
+        <ul class="resume-bullets">
+          <li>Developed a responsive web application for students to explore PG accommodation options.</li>
+          <li>Implemented dynamic functionality and database integration using PHP and MySQL.</li>
+          <li>Used React, Bootstrap, and JavaScript for frontend development and Git/GitHub for version control.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2: Tic Tac Toe -->
+      <div class="resume-item" style="margin-top: 10px;">
+        <div class="item-title">
+          <span class="bullet-point">❖</span> Tic Tac Toe Game
+        </div>
+        <ul class="resume-bullets">
+          <li>Built an interactive Tic Tac Toe game using HTML, CSS, and JavaScript with complete game logic, win detection, and fully responsive design.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3: Portfolio Website -->
+      <div class="resume-item" style="margin-top: 10px;">
+        <div class="item-title">
+          <span class="bullet-point">❖</span> Portfolio Website
+        </div>
+        <ul class="resume-bullets">
+          <li>Designed a fully responsive personal portfolio website using HTML, CSS, and JavaScript to showcase skills, projects, and contact information.</li>
+        </ul>
+      </div>
+
+      <!-- Project 4: Amazon Clone -->
+      <div class="resume-item" style="margin-top: 10px;">
+        <div class="item-title">
+          <span class="bullet-point">❖</span> Amazon Clone Website
+        </div>
+        <ul class="resume-bullets">
+          <li>Created a fully responsive Amazon homepage clone using HTML and CSS featuring hover effects, navigation bar, product cards, and modern UI layout.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS / CERTIFICATION -->
+    <section class="resume-section">
+      <h2 class="section-heading">Achievements / Certification</h2>
+      <ul class="achievements-list">
+        <li>
+          <span class="bullet-point">❖</span>
+          <span><strong>Internshala Trainings</strong> – Full Stack Web Development with AI | 8-Week Training | <strong>83%</strong></span>
+        </li>
+        <li>
+          <span class="bullet-point">❖</span>
+          <span><strong>Oasis Infobyte</strong> – 1-Month Web Development & Designing Internship Certificate</span>
+        </li>
+        <li>
+          <span class="bullet-point">❖</span>
+          <span><strong>YHills Edutech</strong> – Building AI Agent Bootcamp Certification</span>
+        </li>
+        <li>
+          <span class="bullet-point">❖</span>
+          <span><strong>CyberPeace Foundation</strong> – Cyber Peace First Responders & Myth Busters Training (Supported by Google.org)</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>
