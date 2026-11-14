@@ -21,6 +21,7 @@ const profileData = {
     githubUsername: "pankaj-shaw05",
     githubUrl: "https://github.com/pankaj-shaw05",
     linkedinUrl: "https://www.linkedin.com/in/pankaj-lochan-shaw-065179372",
+    portfolioUrl: "https://portfolio-website-ykab.onrender.com",
     resumeUrl: "resume.html", // Standalone printable resume page
     web3formsAccessKey: "ac7928f9-45f4-4ef6-9c6b-3375d7cd05b7", // Official Web3Forms Access Key for shaw21826@gmail.com
   },

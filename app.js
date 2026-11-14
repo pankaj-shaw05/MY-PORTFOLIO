@@ -476,7 +476,9 @@ document.addEventListener("DOMContentLoaded", () => {
           : "";
 
         // Action Buttons
-        const isSelfAnchor = proj.liveUrl && proj.liveUrl.startsWith("#");
+        const isSelfAnchor =
+          proj.id === "personal-portfolio" ||
+          (proj.liveUrl && (proj.liveUrl.startsWith("#") || proj.liveUrl.includes("portfolio-website-ykab.onrender.com")));
         const demoButton =
           proj.liveUrl && proj.liveUrl.trim() !== ""
             ? `<a href="${proj.liveUrl}" ${isSelfAnchor ? "" : 'target="_blank" rel="noopener noreferrer"'} class="project-btn demo-btn" onclick="event.stopPropagation(); ${isSelfAnchor ? "window.scrollTo({top: 0, behavior: 'smooth'}); showToast('You are currently viewing this live portfolio!', 'fa-solid fa-circle-check'); return false;" : ""}">
@@ -595,7 +597,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((l) => `<li>${l}</li>`)
       .join("");
 
-    const isSelfAnchor = proj.liveUrl && proj.liveUrl.startsWith("#");
+    const isSelfAnchor =
+      proj.id === "personal-portfolio" ||
+      (proj.liveUrl && (proj.liveUrl.startsWith("#") || proj.liveUrl.includes("portfolio-website-ykab.onrender.com")));
     const liveBtn =
       proj.liveUrl && proj.liveUrl.trim() !== ""
         ? `<a href="${proj.liveUrl}" ${isSelfAnchor ? "" : 'target="_blank" rel="noopener noreferrer"'} class="btn btn-primary btn-sm" onclick="${isSelfAnchor ? "if(projectDetailModal) projectDetailModal.classList.remove('active'); window.scrollTo({top: 0, behavior: 'smooth'}); showToast('You are currently viewing this live portfolio!', 'fa-solid fa-circle-check'); return false;" : ""}">

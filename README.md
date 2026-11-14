@@ -2,6 +2,8 @@
 
 A premium, modern, and responsive developer portfolio website engineered with clean, modular HTML5, CSS3, and vanilla JavaScript. Built to showcase projects, technical proficiencies, academic journey at **Netaji Subhas University (BCA Class of 2027)**, and public GitHub repositories.
 
+🌐 **Live Portfolio Website**: [https://portfolio-website-ykab.onrender.com](https://portfolio-website-ykab.onrender.com)
+
 ---
 
 ## 🌟 Key Highlights & Design Identity

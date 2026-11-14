@@ -271,7 +271,7 @@ const portfolioProjects = [
       "Strengthened recruiter-focused portfolio design and documentation standards."
     ],
     githubUrl: "https://github.com/pankaj-shaw05/Portfolio-Website",
-    liveUrl: "#home",
+    liveUrl: "https://portfolio-website-ykab.onrender.com",
     featured: true
   }
 ];
